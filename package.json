@@ -1,27 +1,33 @@
 {
-	"name": "Chatify",
-	"version": "1.0.0",
-	"description": "",
-	"main": "server.js",
-	"scripts": {
-		"server": "nodemon backend/server.js",
-		"start": "node backend/server.js",
-		"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
-	},
-	"type": "module",
-	"keywords": [],
-	"author": "Vinay Pandey",
-	"license": "ISC",
-	"dependencies": {
-		"bcryptjs": "^2.4.3",
-		"cookie-parser": "^1.4.6",
-		"dotenv": "^16.4.1",
-		"express": "^4.18.2",
-		"jsonwebtoken": "^9.0.2",
-		"mongoose": "^8.1.1",
-		"socket.io": "^4.7.4"
-	},
-	"devDependencies": {
-		"nodemon": "^3.0.3"
-	}
+  "name": "chatify",
+  "version": "1.0.0",
+  "description": "Real-time MERN chat application with Socket.IO",
+  "main": "backend/server.js",
+  "type": "module",
+  "author": "Vinay Pandey",
+  "license": "ISC",
+
+  "engines": {
+    "node": "18.x"
+  },
+
+  "scripts": {
+    "server": "nodemon backend/server.js",
+    "start": "node backend/server.js",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.1.1",
+    "socket.io": "^4.7.4"
+  },
+
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
 }
