@@ -1,40 +1,80 @@
-💬 Real-Time Chat Application
+# 💬 Chatify – Real-Time Chat Application
 
-A full-stack real-time chat application built using the MERN stack with instant messaging powered by Socket.IO.
-Users can sign up, log in securely, and chat with other users in real time.
+A **full-stack real-time chat application** built using the **MERN stack** with instant messaging powered by **Socket.IO**.
+Users can securely sign up, log in, and communicate with other users in real time.
 
-🚀 Features
+---
 
-🌟 Tech Stack: MERN (MongoDB, Express.js, React, Node.js) + Socket.IO + TailwindCSS + Daisy UI
+## 🚀 Live Demo
 
-🔐 Authentication & Authorization using JWT
+🔗 https://chatify-o2yw.onrender.com/login
 
-💬 Real-time messaging with Socket.IO
+---
 
-🟢 Online user status using Socket.IO and React Context
+## ✨ Features
 
-🗂 Global state management using Zustand
+* 🔐 **Authentication & Authorization** using JWT
+* 💬 **Real-time messaging** powered by Socket.IO
+* 🟢 **Online user status tracking** using Socket.IO + React Context
+* 🗂 **Global state management** using Zustand
+* ⚠️ Robust **error handling** on both client and server
+* 🎨 **Modern responsive UI** with TailwindCSS + Daisy UI
+* 🚀 **Production-ready deployment**
 
-⚠️ Error handling on both server and client
+---
 
-🎨 Modern responsive UI with TailwindCSS + Daisy UI
+## 🛠 Tech Stack
 
-🚀 Production-ready deployment setup
+**Frontend**
 
-🛠 Tech Stack
+* React
+* TailwindCSS
+* Daisy UI
+* Zustand
 
-MongoDB – Database
+**Backend**
 
-Express.js – Backend framework
+* Node.js
+* Express.js
+* Socket.IO
+* JWT Authentication
 
-React – Frontend library
+**Database**
 
-Node.js – Runtime environment
+* MongoDB
 
-Socket.IO – Real-time communication
+---
 
-TailwindCSS – Styling
+## 📦 Installation
 
-Daisy UI – UI components
+Clone the repository
 
-JWT – Authentication
+```bash
+git clone https://github.com/PandeyVinay8765/ChatiFy.git
+cd ChatiFy
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the application
+
+```bash
+npm run dev
+```
+
+---
+
+## 📸 Screenshots
+
+(Add screenshots of your UI here)
+
+---
+
+## 👨‍💻 Author
+
+Vinay Pandey
+GitHub: https://github.com/PandeyVinay8765
