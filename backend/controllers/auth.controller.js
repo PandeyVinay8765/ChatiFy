@@ -22,8 +22,8 @@ export const signup = async (req, res) => {
 
 		// https://avatar-placeholder.iran.liara.run/
 
-		const boyProfilePic = `https://api.dicebear.com/7.x/adventurer/svg?seed=${username}`;
-         const girlProfilePic = `https://api.dicebear.com/7.x/adventurer/svg?seed=${username}`;
+		const boyProfilePic = `https://api.dicebear.com/7.x/adventurer/png?seed=${username}`;
+        const girlProfilePic = `https://api.dicebear.com/7.x/adventurer/png?seed=${username}`;
 
 		const newUser = new User({
 			fullName,
