@@ -1,13 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useSocketContext } from "../context/SocketContext";
 import useConversation from "../zustand/useConversation";
-
-// create sound once
-const notificationSound = new Audio("/notification.mp3");
 
 const useListenMessages = () => {
 	const { socket } = useSocketContext();
 	const { setMessages } = useConversation();
+
+	const audioRef = useRef(null);
+
+	// load sound once
+	useEffect(() => {
+		audioRef.current = new Audio("/notification.mp3");
+		audioRef.current.preload = "auto";
+	}, []);
 
 	useEffect(() => {
 		if (!socket) return;
@@ -15,15 +20,16 @@ const useListenMessages = () => {
 		const handleNewMessage = (newMessage) => {
 			newMessage.shouldShake = true;
 
-			// update messages
 			setMessages((prev) => [...prev, newMessage]);
 
-			// play notification sound safely
+			// play sound safely
 			try {
-				notificationSound.currentTime = 0;
-				notificationSound.play().catch(() => {});
-			} catch (error) {
-				console.log("Sound error:", error);
+				if (audioRef.current) {
+					audioRef.current.currentTime = 0;
+					audioRef.current.play().catch(() => {});
+				}
+			} catch (err) {
+				console.log("Audio error:", err);
 			}
 		};
 
