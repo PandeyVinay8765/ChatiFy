@@ -7,18 +7,27 @@ const useListenMessages = () => {
 	const { setMessages } = useConversation();
 
 	useEffect(() => {
-		socket?.on("newMessage", (newMessage) => {
-			newMessage.shouldShake = true;
+		if (!socket) return;
 
-			// play notification sound
-			const sound = new Audio("/notification.mp3");
-			sound.volume = 1;
-			sound.play().catch(() => {});
+		const handleNewMessage = (newMessage) => {
+			try {
+				newMessage.shouldShake = true;
 
-			setMessages((prev) => [...prev, newMessage]);
-		});
+				// Play notification sound safely
+				const audio = new Audio("/notification.mp3");
+				audio.play().catch(() => {});
 
-		return () => socket?.off("newMessage");
+				setMessages((prev) => [...prev, newMessage]);
+			} catch (err) {
+				console.error("Message listener error:", err);
+			}
+		};
+
+		socket.on("newMessage", handleNewMessage);
+
+		return () => {
+			socket.off("newMessage", handleNewMessage);
+		};
 	}, [socket, setMessages]);
 };
 
