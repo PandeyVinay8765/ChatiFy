@@ -10,16 +10,16 @@ const useListenMessages = () => {
 		if (!socket) return;
 
 		const handleNewMessage = (newMessage) => {
+			// update messages safely
+			setMessages((prev) => [...prev, newMessage]);
+
+			// play sound safely
 			try {
-				newMessage.shouldShake = true;
-
-				// Play notification sound safely
 				const audio = new Audio("/notification.mp3");
+				audio.volume = 1;
 				audio.play().catch(() => {});
-
-				setMessages((prev) => [...prev, newMessage]);
 			} catch (err) {
-				console.error("Message listener error:", err);
+				console.log("audio error", err);
 			}
 		};
 
