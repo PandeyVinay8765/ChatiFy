@@ -12,15 +12,12 @@ const useListenMessages = () => {
 		socket?.on("newMessage", (newMessage) => {
 			newMessage.shouldShake = true;
 
-			// play notification sound
 			const sound = new Audio(notificationSound);
-			sound.play();
+			sound.play().catch(() => {});   // prevent browser block
 
-			// FIX: functional state update
-			setMessages((prevMessages) => [...prevMessages, newMessage]);
+			setMessages((prev) => [...prev, newMessage]);
 		});
 
-		// cleanup listener
 		return () => socket?.off("newMessage");
 	}, [socket, setMessages]);
 };
