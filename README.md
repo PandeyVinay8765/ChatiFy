@@ -2,10 +2,14 @@
 
 ![MERN](https://img.shields.io/badge/Stack-MERN-green)
 ![AI](https://img.shields.io/badge/AI-Reply%20Suggestions-blue)
-![License](https://img.shields.io/badge/License-MIT-blue)
+![Status](https://img.shields.io/badge/Status-Live-success)
+
 
 **ChatiFy** is a modern **real-time chat application** built using the **MERN stack**.
-It allows users to send messages instantly and also provides **AI-powered reply suggestions** to help users respond faster.
+It allows users to send messages instantly and provides **AI-powered reply suggestions** to help users respond faster.
+
+🌐 **Live Demo:**
+https://chatify-o2yw.onrender.com/
 
 ---
 
@@ -63,13 +67,13 @@ This helps users respond faster without typing full messages.
 * Mongoose
 * Socket.io
 * JWT Authentication
-* AI API integration
+* AI API Integration
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 ChatiFy
 │
 ├── backend
@@ -98,7 +102,7 @@ git clone https://github.com/your-username/ChatiFy.git
 cd ChatiFy
 ```
 
-### 2. Backend setup
+### 2. Backend Setup
 
 ```bash
 cd backend
@@ -107,14 +111,14 @@ npm install
 
 Create `.env`
 
-```
+```env
 PORT=5000
 MONGO_URI=your_mongodb_connection
 JWT_SECRET=your_secret_key
 AI_API_KEY=your_ai_key
 ```
 
-Run server
+Run the server
 
 ```bash
 npm run dev
@@ -122,7 +126,7 @@ npm run dev
 
 ---
 
-### 3. Frontend setup
+### 3. Frontend Setup
 
 ```bash
 cd frontend
@@ -162,4 +166,4 @@ http://localhost:5173
 
 ## 👨‍💻 Author
 
-Vinay Pandey
+**Vinay Pandey**
