@@ -1,0 +1,260 @@
+[33mcommit 8e0eb77b16f3c954e0e90f57ec93d46452040152[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mai-integration[m[33m)[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 15 14:23:08 2026 +0530
+
+    Ai integrated SuccessFully
+
+[33mcommit 3a8f21f33ba86ed76f1c51dbc8d635f5f32088d4[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 15 14:12:28 2026 +0530
+
+    Ai Integrated Groq
+
+[33mcommit aaeac0d65c7f0bbd6524cb91f09ed206d203fe2d[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 15 14:09:00 2026 +0530
+
+    ai Integrated
+
+[33mcommit 0690a81e9a48c71d657f834cadeeadc05255b9fe[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Fri Mar 13 19:33:13 2026 +0530
+
+    Update placeholder text for full name input
+
+[33mcommit fc54ea43be95a2bb3cf7fc84f2e2935f5f805f06[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Wed Mar 11 09:40:20 2026 +0530
+
+    Update placeholders in SignUp form inputs
+
+[33mcommit aa47ce47985ca721a9593814ff69a9b09b658f46[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 20:56:14 2026 +0530
+
+    Update useConversation.js
+
+[33mcommit d0de9964029310313d102d1ca3da15a990e49fda[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 20:49:22 2026 +0530
+
+    Update useListenMessages.js
+
+[33mcommit d6b3999a416dca115101c7663a14b972c81a72e8[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 20:44:55 2026 +0530
+
+    Implement notification sound for new messages
+    
+    Add notification sound for new messages and handle playback safely.
+
+[33mcommit c330af4ca178fc7c892c1812c4c38cc2254d2046[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 20:44:08 2026 +0530
+
+    Implement notification permission and audio unlock
+    
+    Add notification permission request and audio unlock on user interaction.
+
+[33mcommit 566d41e3ada5d86c1007b665e3e77ae59591af6c[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 20:35:20 2026 +0530
+
+    Refactor useListenMessages to remove audio handling
+    
+    Removed audio notification logic from useListenMessages hook.
+
+[33mcommit d1891b3943f10daf53836236b5876896b690b06a[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 20:29:20 2026 +0530
+
+    Optimize audio playback and message handling
+    
+    Refactor audio handling for new messages and ensure audio plays from a single instance.
+
+[33mcommit 25440e1b15bf99bcd06688e15125cbe4547dcdcb[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 20:24:57 2026 +0530
+
+    Update useListenMessages.js
+
+[33mcommit 6a86f25cc19d743835c35c3936d08c7443cdb7a0[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 20:21:04 2026 +0530
+
+    Refactor message listener and error handling
+
+[33mcommit 85c505de8b9b4f129a21672959d842385747afaf[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 20:16:33 2026 +0530
+
+    Refactor notification sound handling in useListenMessages
+    
+    Update notification sound implementation to use a relative path and set volume.
+
+[33mcommit 532afaaa3c16c40b081f633e20d79564f71e79c0[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 20:14:15 2026 +0530
+
+    Add files via upload
+
+[33mcommit 6701171d3f4cf77936dc1f0d3cac84cee0c61ad1[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 20:04:28 2026 +0530
+
+    Change profile picture format from SVG to PNG
+
+[33mcommit 432f9cb1184ab659a644dd81b77f3707e2c9ec59[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 20:00:35 2026 +0530
+
+    Fix sound play and improve state update in useListenMessages
+    
+    Prevent browser block on sound play and update state function.
+
+[33mcommit f7bddc5b2e7ff323c0a4747e0dd07ba6e1b0879f[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 19:56:19 2026 +0530
+
+    Update profile picture URLs to use Dicebear API
+
+[33mcommit 316208462694e106f10ad5a60a1f3d52139de017[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 19:41:40 2026 +0530
+
+    Refactor socket connection logging and user management
+
+[33mcommit b765f0f59d3928a5dc9c997270487ad8547aa01b[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 19:40:30 2026 +0530
+
+    Refactor message state update in useListenMessages
+    
+    Updated message handling to use functional state update for setMessages.
+
+[33mcommit cc4bc0c9307808cefe411cc5041bbb4f4f2956e0[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 19:38:53 2026 +0530
+
+    Refactor Conversation component for clarity
+
+[33mcommit 72a756697d46696c1491c0ec5f3926c2e622dd83[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Tue Mar 10 19:35:05 2026 +0530
+
+    Update socket connection URL in SocketContext
+
+[33mcommit eee39371a24f6ee8eaf06d4ac97f23b783368feb[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Mon Mar 9 19:48:55 2026 +0530
+
+    Remove screenshots section from README
+    
+    Removed the screenshots section from the README.
+
+[33mcommit a5e59949730f019f7bf27b938d30ad7160345685[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Mon Mar 9 01:16:29 2026 +0530
+
+    Revise README for improved structure and readability
+    
+    Updated README.md to enhance formatting and clarity.
+
+[33mcommit 149bfd24b250e44f192589d00a3e1ff4dc1deb52[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 8 23:30:29 2026 +0530
+
+    ui fixed
+
+[33mcommit f60cbbb1ccd31abe8f9b8ae589bed9657fda374c[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 8 23:27:11 2026 +0530
+
+    signup updated
+
+[33mcommit dc0ce5379f513657c75377236c81557bb12fdc02[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 8 23:25:02 2026 +0530
+
+    login edited
+
+[33mcommit 54b1258a6614e4b67bdf960e364640d6455351cf[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 8 23:19:00 2026 +0530
+
+    vite fixed
+
+[33mcommit a581a50929f36aaa0e45cfe51bff8e44aa8d3331[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 8 22:52:07 2026 +0530
+
+    model fixed
+
+[33mcommit f01b217aada04996ff1ed77a3ee868f5ae37b77f[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 8 22:48:33 2026 +0530
+
+    fixed protectRoute
+
+[33mcommit 3daad9a78fd8c03e02b2b65106b6963eacdacea9[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 8 22:39:13 2026 +0530
+
+    file name fixed
+
+[33mcommit 98091d75dbf37a17a457352d5f45ba21034f6b22[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 8 22:32:52 2026 +0530
+
+    json
+
+[33mcommit 0fc3dcd62a59e912c2c4d8cbb06b4895fb887f15[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 8 22:28:55 2026 +0530
+
+    json
+
+[33mcommit c8cc3d9654e02eee720f7c446135f147c6b81671[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 8 22:25:58 2026 +0530
+
+    json
+
+[33mcommit 5287f409051773afb919c25839cbef9555db4cea[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 8 22:19:35 2026 +0530
+
+    json
+
+[33mcommit 31802e6a85ca2460c17b8edb308326625a53acaf[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 8 22:16:27 2026 +0530
+
+    json fixed
+
+[33mcommit 92c5943c30d20a98892394f5a91bdc33584fbc6b[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 8 22:15:10 2026 +0530
+
+    server fixed
+
+[33mcommit 6124cc10ed9c2778ae21353105f4c4e1c6754c58[m
+Merge: 8d4017a fdae344
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 8 22:11:37 2026 +0530
+
+    Merge branch 'main' of https://github.com/PandeyVinay8765/ChatiFy
+
+[33mcommit 8d4017ab1f8f0cfc93d2e4f6af7fb3118c7535f9[m
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 8 22:11:32 2026 +0530
+
+    json fixed
+
+[33mcommit fdae344669d3686a79bdec715e124fd764b7fa25[m
+Merge: 3d2f616 ed97f17
+Author: Vinay Pandey <pandeyjivinay8765@gmail.com>
+Date:   Sun Mar 8 22:09:29 2026 +0530
+
+    Merge pull request #8 from PandeyVinay8765/pages-fix
+   

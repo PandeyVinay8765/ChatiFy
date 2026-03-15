@@ -16,7 +16,7 @@ const io = new Server(server, {
 const userSocketMap = {};
 
 export const getReceiverSocketId = (receiverId) => {
-	return userSocketMap[receiverId];
+	return userSocketMap[receiverId.toString()];
 };
 
 io.on("connection", (socket) => {
@@ -24,19 +24,16 @@ io.on("connection", (socket) => {
 
 	const userId = socket.handshake.query.userId;
 
-	// store user socket
-	if (userId) {
-		userSocketMap[userId] = socket.id;
+	if (userId && userId !== "undefined") {
+		userSocketMap[userId.toString()] = socket.id;
+		console.log("Mapped userId:", userId, "-> socketId:", socket.id);
 	}
 
-	// send online users to everyone
 	io.emit("getOnlineUsers", Object.keys(userSocketMap));
 
 	socket.on("disconnect", () => {
 		console.log("User disconnected:", socket.id);
-
 		delete userSocketMap[userId];
-
 		io.emit("getOnlineUsers", Object.keys(userSocketMap));
 	});
 });
