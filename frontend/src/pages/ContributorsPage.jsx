@@ -5,43 +5,76 @@ const data = {
     name: "ChatiFy",
     emoji: "💬",
     vinay: [
-      { task: "User authentication — signup, login and logout", file: "auth.controller.js" },
-      { task: "Database design — users, messages and conversations", file: "models/" },
-      { task: "Frontend UI — sidebar, login page and signup page", file: "components/sidebar/" },
-      { task: "Displaying conversations and messages on screen", file: "pages/home/" },
-      { task: "Connecting frontend to backend using API calls", file: "hooks/" },
-      { task: "Overall project structure and deployment", file: "server.js" },
+      // Frontend
+      { area: "Frontend", task: "Login and signup pages UI", file: "pages/login/, pages/signup/" },
+      { area: "Frontend", task: "Sidebar showing all conversations", file: "components/sidebar/" },
+      { area: "Frontend", task: "Message display and input UI", file: "components/messages/" },
+      { area: "Frontend", task: "Fetching conversations list from server", file: "hooks/useGetConversations.js" },
+      { area: "Frontend", task: "Fetching messages when a chat is opened", file: "hooks/useGetMessages.js" },
+      { area: "Frontend", task: "Sending a message from the input box", file: "hooks/useSendMessage.js" },
+      // Backend
+      { area: "Backend", task: "User signup with password hashing", file: "controllers/auth.controller.js" },
+      { area: "Backend", task: "User login and logout", file: "controllers/auth.controller.js" },
+      { area: "Backend", task: "JWT token generation and cookie setup", file: "utils/generateToken.js" },
+      { area: "Backend", task: "Route protection — blocks logged out users", file: "middleware/protectRoute.js" },
+      { area: "Backend", task: "Database models — User, Message, Conversation", file: "models/" },
+      { area: "Backend", task: "MongoDB connection setup", file: "db/connectToMongoDB.js" },
+      { area: "Backend", task: "Server setup and all API routes registered", file: "server.js" },
     ],
     vicky: [
-      { task: "Real-time messaging so messages appear instantly without refresh", file: "socket/socket.js" },
-      { task: "Tracking which users are online at any moment", file: "socket/socket.js" },
-      { task: "AI assistant that replies automatically inside the chat", file: "message.controller.js" },
-      { task: "Global state management so all components share the same data", file: "zustand/useConversation.js" },
-      { task: "Managing the live connection throughout the whole app", file: "context/SocketContext.jsx" },
-      { task: "Playing notification sound when a new message arrives", file: "hooks/useListenMessages.js" },
+      // Backend
+      { area: "Backend", task: "Real-time messaging so messages appear instantly without refresh", file: "socket/socket.js" },
+      { area: "Backend", task: "Tracking which users are currently online", file: "socket/socket.js" },
+      { area: "Backend", task: "AI assistant that reads the chat and replies automatically", file: "controllers/message.controller.js" },
+      { area: "Backend", task: "Get all messages between two users", file: "controllers/message.controller.js" },
+      { area: "Backend", task: "AI reply suggestions based on conversation", file: "controllers/ai.controller.js" },
+      { area: "Backend", task: "AI chat summary feature", file: "controllers/ai.controller.js" },
+      // Frontend
+      { area: "Frontend", task: "Global state — selected chat and messages shared across app", file: "zustand/useConversation.js" },
+      { area: "Frontend", task: "App-wide live connection management", file: "context/SocketContext.jsx" },
+      { area: "Frontend", task: "New messages appear on screen without refreshing", file: "hooks/useListenMessages.js" },
+      { area: "Frontend", task: "Notification sound when a new message arrives", file: "hooks/useListenMessages.js" },
     ],
   },
   talentiq: {
     name: "Talent-IQ",
     emoji: "🧠",
     vinay: [
-      { task: "All frontend pages — home, dashboard, problems, resume builder", file: "src/pages/" },
-      { task: "UI design and styling across the entire application", file: "frontend/src/" },
-      { task: "Navigation and protected routes — only logged in users can access", file: "App.jsx" },
-      { task: "Dashboard showing active and recent sessions", file: "DashboardPage.jsx" },
-      { task: "Problems list page with difficulty levels", file: "ProblemsPage.jsx" },
-      { task: "Resume builder page UI", file: "ResumeBuilderPage.jsx" },
+      // Frontend
+      { area: "Frontend", task: "Home landing page", file: "pages/HomePage.jsx" },
+      { area: "Frontend", task: "Dashboard page — shows active and recent sessions", file: "pages/DashboardPage.jsx" },
+      { area: "Frontend", task: "Problems list page with difficulty levels", file: "pages/ProblemsPage.jsx" },
+      { area: "Frontend", task: "Resume builder page", file: "pages/ResumeBuilderPage.jsx" },
+      { area: "Frontend", task: "Navbar component", file: "components/Navbar.jsx" },
+      { area: "Frontend", task: "Protected routes — only logged in users can access pages", file: "App.jsx" },
+      { area: "Frontend", task: "UI design and styling across the whole app", file: "frontend/src/" },
+      // Backend
+      { area: "Backend", task: "Database models — User and Session", file: "models/" },
+      { area: "Backend", task: "MongoDB connection and environment variable setup", file: "lib/db.js, lib/env.js" },
+      { area: "Backend", task: "Server setup and all API routes registered", file: "server.js" },
     ],
     vicky: [
-      { task: "Video calling inside interview sessions", file: "lib/stream.js" },
-      { task: "Live chat between interviewer and candidate during session", file: "lib/stream.js" },
-      { task: "Creating, joining and ending interview sessions", file: "controllers/sessionController.js" },
-      { task: "Code editor that both users see and edit at the same time", file: "server.js" },
-      { task: "Auto-saving new users to database when they sign up", file: "lib/inngest.js" },
-      { task: "Running code in Python, JavaScript, Java and C++ inside the app", file: "lib/piston.js" },
+      // Backend
+      { area: "Backend", task: "Video calling inside interview sessions", file: "lib/stream.js" },
+      { area: "Backend", task: "Live chat between both users during a session", file: "lib/stream.js" },
+      { area: "Backend", task: "Creating a new interview session", file: "controllers/sessionController.js" },
+      { area: "Backend", task: "Joining an existing session as participant", file: "controllers/sessionController.js" },
+      { area: "Backend", task: "Ending a session and cleaning everything up", file: "controllers/sessionController.js" },
+      { area: "Backend", task: "Auto-saving new users to database on signup", file: "lib/inngest.js" },
+      { area: "Backend", task: "Running code in Python, JavaScript, Java and C++", file: "lib/piston.js" },
+      { area: "Backend", task: "Real-time code sync so both users see same code", file: "server.js" },
+      // Frontend
+      { area: "Frontend", task: "Active sessions list on dashboard", file: "components/ActiveSessions.jsx" },
+      { area: "Frontend", task: "Live code editor panel inside session", file: "components/CodeEditorPanel.jsx" },
+      { area: "Frontend", task: "Problem description with examples and constraints", file: "components/ProblemDescription.jsx" },
     ],
   },
 };
+
+const areaBadge = (area) =>
+  area === "Frontend"
+    ? "bg-blue-500/10 text-blue-400 border border-blue-500/20"
+    : "bg-orange-500/10 text-orange-400 border border-orange-500/20";
 
 export default function ContributorsPage() {
   const [project, setProject] = useState("chatify");
@@ -51,13 +84,13 @@ export default function ContributorsPage() {
     <div className="min-h-screen bg-base-200 py-10 px-4">
 
       {/* Header */}
-      <div className="max-w-4xl mx-auto mb-8 text-center">
+      <div className="max-w-5xl mx-auto mb-8 text-center">
         <h1 className="text-4xl font-bold mb-1">Contributors</h1>
-        <p className="text-base-content/50 text-sm">Who built what in this project</p>
+        <p className="text-base-content/40 text-sm">Who built what — frontend and backend</p>
       </div>
 
       {/* Project Toggle */}
-      <div className="max-w-4xl mx-auto mb-8 flex gap-2 bg-base-100 rounded-xl p-1 border border-base-300">
+      <div className="max-w-5xl mx-auto mb-8 flex gap-2 bg-base-100 rounded-xl p-1 border border-base-300">
         {Object.entries(data).map(([key, val]) => (
           <button
             key={key}
@@ -73,9 +106,9 @@ export default function ContributorsPage() {
         ))}
       </div>
 
-      <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
 
-        {/* Vinay Card */}
+        {/* Vinay */}
         <div className="card bg-base-100 border border-base-300 shadow-sm">
           <div className="card-body">
             <div className="flex items-center gap-3 mb-5">
@@ -86,7 +119,7 @@ export default function ContributorsPage() {
               </div>
               <div>
                 <p className="font-bold text-base">Vinay Pandey</p>
-                <p className="text-xs text-base-content/40">Frontend Developer & Project Lead</p>
+                <p className="text-xs text-base-content/40">Frontend + Backend</p>
               </div>
             </div>
 
@@ -94,7 +127,12 @@ export default function ContributorsPage() {
               {p.vinay.map((item, i) => (
                 <div key={i} className="flex items-start gap-2 bg-base-200 rounded-lg px-3 py-2.5">
                   <span className="text-success text-xs mt-0.5 shrink-0">✓</span>
-                  <div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 flex-wrap mb-0.5">
+                      <span className={`text-[10px] px-1.5 py-0.5 rounded font-medium ${areaBadge(item.area)}`}>
+                        {item.area}
+                      </span>
+                    </div>
                     <p className="text-sm text-base-content/80 leading-snug">{item.task}</p>
                     <p className="text-xs text-base-content/25 font-mono mt-0.5">{item.file}</p>
                   </div>
@@ -104,7 +142,7 @@ export default function ContributorsPage() {
           </div>
         </div>
 
-        {/* Vicky Card */}
+        {/* Vicky */}
         <div className="card bg-base-100 border border-secondary/30 shadow-sm">
           <div className="card-body">
             <div className="flex items-center gap-3 mb-5">
@@ -115,7 +153,7 @@ export default function ContributorsPage() {
               </div>
               <div>
                 <p className="font-bold text-base">Vicky Sahani</p>
-                <p className="text-xs text-base-content/40">Backend Developer & Systems</p>
+                <p className="text-xs text-base-content/40">Backend + Core Systems</p>
               </div>
             </div>
 
@@ -123,7 +161,12 @@ export default function ContributorsPage() {
               {p.vicky.map((item, i) => (
                 <div key={i} className="flex items-start gap-2 bg-base-200 rounded-lg px-3 py-2.5 border border-secondary/10">
                   <span className="text-secondary text-xs mt-0.5 shrink-0">✓</span>
-                  <div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 flex-wrap mb-0.5">
+                      <span className={`text-[10px] px-1.5 py-0.5 rounded font-medium ${areaBadge(item.area)}`}>
+                        {item.area}
+                      </span>
+                    </div>
                     <p className="text-sm text-base-content/80 leading-snug">{item.task}</p>
                     <p className="text-xs text-base-content/25 font-mono mt-0.5">{item.file}</p>
                   </div>
