@@ -4,9 +4,8 @@
 ![AI](https://img.shields.io/badge/AI-Reply%20Suggestions-blue)
 ![Status](https://img.shields.io/badge/Status-Live-success)
 
-
 **ChatiFy** is a modern **real-time chat application** built using the **MERN stack**.
-It allows users to send messages instantly and provides **AI-powered reply suggestions** to help users respond faster.
+It allows users to send messages instantly and provides an **AI assistant** that replies automatically inside the chat.
 
 🌐 **Live Demo:**
 https://chatify-o2yw.onrender.com/
@@ -17,35 +16,38 @@ https://chatify-o2yw.onrender.com/
 
 * 🔐 Secure user authentication (JWT)
 * 💬 Real-time messaging using **Socket.io**
-* 🤖 **AI-powered smart reply suggestions**
+* 🤖 **AI assistant** that replies automatically inside the chat
+* 🧠 **AI-powered smart reply suggestions**
+* 📋 **AI chat summary** — summarize any conversation in bullet points
 * 👥 One-to-one chat conversations
 * 📡 Online/offline user status
 * ⚡ Fast and responsive UI
-* 🔔 Real-time message updates
+* 🔔 Notification sound on new messages
 * 🗂 Conversation management
 
 ---
 
-## 🤖 AI Reply Suggestions
+## 🤖 AI Features
 
-ChatiFy includes an **AI-powered feature that suggests replies automatically based on the latest message in the conversation**.
+ChatiFy includes **AI-powered features** built on the Groq API using the `llama-3.3-70b-versatile` model.
 
-### How it works
+### AI Assistant
+- Chat directly with an AI bot inside the app
+- The AI reads the full conversation history and replies in context
 
-1. User receives a message.
-2. The backend sends the message context to the AI API.
-3. AI generates **smart reply suggestions**.
-4. Suggested replies appear in the UI for quick response.
+### Smart Reply Suggestions
+- Receive 3 short reply options based on the latest message
+- Helps users respond faster without typing full messages
 
 Example suggestions:
-
 ```text
-Sure, I’ll check that.
+Sure, I'll check that.
 Sounds good to me.
-Let’s discuss this tomorrow.
+Let's discuss this tomorrow.
 ```
 
-This helps users respond faster without typing full messages.
+### Chat Summary
+- Summarize any conversation into 3 concise bullet points
 
 ---
 
@@ -56,7 +58,8 @@ This helps users respond faster without typing full messages.
 * React.js
 * Vite
 * Tailwind CSS
-* Axios
+* DaisyUI
+* Zustand
 * Socket.io Client
 
 ### Backend
@@ -67,7 +70,7 @@ This helps users respond faster without typing full messages.
 * Mongoose
 * Socket.io
 * JWT Authentication
-* AI API Integration
+* Groq AI (llama-3.3-70b)
 
 ---
 
@@ -81,12 +84,16 @@ ChatiFy
 │   ├── routes
 │   ├── models
 │   ├── middleware
+│   ├── socket
 │   └── server.js
 │
 ├── frontend
 │   ├── src
-│   ├── components
-│   └── pages
+│   │   ├── components
+│   │   ├── context
+│   │   ├── hooks
+│   │   ├── pages
+│   │   └── zustand
 │
 └── README.md
 ```
@@ -113,9 +120,9 @@ Create `.env`
 
 ```env
 PORT=5000
-MONGO_URI=your_mongodb_connection
+MONGO_DB_URI=your_mongodb_connection
 JWT_SECRET=your_secret_key
-AI_API_KEY=your_ai_key
+GROQ_API_KEY=your_groq_key
 ```
 
 Run the server
@@ -144,13 +151,16 @@ http://localhost:5173
 
 ## 📡 API Endpoints
 
-| Method | Endpoint         | Description                   |
-| ------ | ---------------- | ----------------------------- |
-| POST   | /api/auth/signup | Register user                 |
-| POST   | /api/auth/login  | Login user                    |
-| GET    | /api/users       | Get users                     |
-| POST   | /api/messages    | Send message                  |
-| POST   | /api/ai/suggest  | Generate AI reply suggestions |
+| Method | Endpoint              | Description                  |
+| ------ | --------------------- | ---------------------------- |
+| POST   | /api/auth/signup      | Register user                |
+| POST   | /api/auth/login       | Login user                   |
+| POST   | /api/auth/logout      | Logout user                  |
+| GET    | /api/users            | Get all users                |
+| GET    | /api/messages/:id     | Get messages with a user     |
+| POST   | /api/messages/send/:id | Send a message              |
+| POST   | /api/ai/suggest       | Get AI reply suggestions     |
+| POST   | /api/ai/summarize     | Summarize a conversation     |
 
 ---
 
@@ -167,21 +177,37 @@ http://localhost:5173
 ## 👨‍💻 Project Contribution
 
 ### 🔹 Vinay Pandey
-- Frontend (React + Tailwind UI)
-- API integration
-- Routing and state handling
-- JWT Authentication (implemented collaboratively)
+
+**Frontend**
+- Login and signup pages UI
+- Sidebar showing all conversations
+- Message display and input UI
+- Fetching conversations and messages from server
+- Sending messages from the input box
+
+**Backend**
+- User signup with password hashing
+- User login and logout
+- JWT token generation and cookie setup
+- Route protection — blocks logged out users
+- Database models — User, Message, Conversation
+- MongoDB connection setup
+- Server setup and all API routes registered
+
+---
 
 ### 🔹 Vicky Sahani
-- Real-time system architecture using Socket.io
-  - Scalable socket connection handling
-  - Event-driven messaging system (emit/listen)
-  - Online/offline presence tracking
-  - Room-based chat management
-- AI-based features
-  - Smart reply suggestion engine
-  - Message filtering and moderation logic
-- Backend optimization
-  - Efficient event handling
-  - Reduced latency in message delivery
-- Contributed to JWT authentication (token validation & middleware)
+
+**Backend**
+- Real-time messaging so messages appear instantly without refresh
+- Tracking which users are currently online
+- AI assistant that reads the chat and replies automatically
+- Fetching all messages between two users
+- AI reply suggestions based on conversation
+- AI chat summary feature
+
+**Frontend**
+- Global state — selected chat and messages shared across the whole app
+- App-wide live connection management
+- New messages appear on screen without refreshing
+- Notification sound when a new message arrives
