@@ -164,6 +164,24 @@ http://localhost:5173
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Project Contribution
 
-**Vinay Pandey**
+### 🔹 Vinay Pandey
+- Frontend (React + Tailwind UI)
+- API integration
+- Routing and state handling
+- JWT Authentication (implemented collaboratively)
+
+### 🔹 Vicky Sahani
+- Real-time system architecture using Socket.io
+  - Scalable socket connection handling
+  - Event-driven messaging system (emit/listen)
+  - Online/offline presence tracking
+  - Room-based chat management
+- AI-based features
+  - Smart reply suggestion engine
+  - Message filtering and moderation logic
+- Backend optimization
+  - Efficient event handling
+  - Reduced latency in message delivery
+- Contributed to JWT authentication (token validation & middleware)
